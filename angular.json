@@ -315,6 +315,32 @@
       },
       "tags": [],
       "implicitDependencies": ["client"]
+    },
+    "fire-client": {
+      "projectType": "library",
+      "root": "libs/fire-client",
+      "sourceRoot": "libs/fire-client/src",
+      "prefix": "todo",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/fire-client"],
+          "options": {
+            "jestConfig": "libs/fire-client/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/fire-client/src/**/*.ts",
+              "libs/fire-client/src/**/*.html"
+            ]
+          }
+        }
+      },
+      "tags": []
     }
   }
 }
