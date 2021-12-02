@@ -87,6 +87,15 @@
             "jestConfig": "apps/admin/jest.config.js",
             "passWithNoTests": true
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "browserTarget": "admin:build:production",
+            "firebaseProject": "nx-todo",
+            "firebaseHostingSite": "admin-nx-todo"
+          }
         }
       },
       "tags": []
@@ -265,6 +274,15 @@
           "options": {
             "jestConfig": "apps/client/jest.config.js",
             "passWithNoTests": true
+          }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "browserTarget": "client:build:production",
+            "firebaseProject": "nx-todo",
+            "firebaseHostingSite": "nx-todo"
           }
         }
       },
