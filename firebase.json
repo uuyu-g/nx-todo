@@ -1,0 +1,28 @@
+{
+  "firestore": {
+    "rules": "apps/backend/firestore.rules",
+    "indexes": "apps/backend/firestore.indexes.json"
+  },
+  "functions": {
+    "source": "dist/apps/backend",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+  },
+  "hosting": {
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "emulators": {
+    "functions": {
+      "port": 5001
+    },
+    "ui": {
+      "enabled": true
+    }
+  }
+}
