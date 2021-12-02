@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "nx-todo"
+  },
+  "targets": {
+    "nx-todo": {
+      "hosting": {
+        "client": [
+          "nx-todo"
+        ],
+        "admin": [
+          "admin-nx-todo"
+        ]
+      }
+    }
   }
 }
