@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { EMPTY, Observable } from 'rxjs';
 import { YodaService } from '@todo/fire-client';
-import { schemaBuildable } from '@todo/schema-buildable';
 
 @Component({
   selector: 'todo-root',

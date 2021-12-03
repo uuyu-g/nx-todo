@@ -16,8 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@todo/fire-client": ["libs/fire-client/src/index.ts"],
-      "@todo/schema": ["libs/schema/src/index.ts"],
-      "@todo/schema-buildable": ["libs/schema-buildable/src/index.ts"]
+      "@todo/proto": ["libs/proto/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

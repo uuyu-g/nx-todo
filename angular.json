@@ -342,60 +342,16 @@
       },
       "tags": []
     },
-    "schema": {
-      "root": "libs/schema",
-      "sourceRoot": "libs/schema/src",
+    "proto": {
+      "root": "libs/proto",
+      "sourceRoot": "libs/proto/src",
       "projectType": "library",
       "architect": {
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/schema/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/schema"],
-          "options": {
-            "jestConfig": "libs/schema/jest.config.js",
-            "passWithNoTests": true
-          }
-        }
-      },
-      "tags": []
-    },
-    "schema-buildable": {
-      "root": "libs/schema-buildable",
-      "sourceRoot": "libs/schema-buildable/src",
-      "projectType": "library",
-      "architect": {
-        "build-proto": {
-          "builder": "@nrwl/workspace:run-commands",
-          "options": {
-            "cwd": "libs/schema-buildable",
-            "command": "bash gen-proto.sh"
-          }
-        },
         "build": {
           "builder": "@nrwl/workspace:run-commands",
           "options": {
-            "command": "nx run schema-buildable:build-proto"
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "outputs": ["{options.outputFile}"],
-          "options": {
-            "lintFilePatterns": ["libs/schema-buildable/**/*.ts"]
-          }
-        },
-        "test": {
-          "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/schema-buildable"],
-          "options": {
-            "jestConfig": "libs/schema-buildable/jest.config.js",
-            "passWithNoTests": true
+            "cwd": "libs/proto",
+            "command": "bash gen-proto.sh"
           }
         }
       },

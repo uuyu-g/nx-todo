@@ -8,18 +8,6 @@ for dir in $proto_dirs; do
 done
 
 npx pbjs \
-  -o ./src/proto.cjs \
-  -t static-module \
-  --no-create \
-  --force-number \
-  ${proto_files[@]}
-  # --force-long \
-  # --proto_path=./src/proto/thirdparty/ \
-  # --keep-case \
-  # --plugin=protoc-gen-firebase_rules=/usr/local/bin/protoc-gen-firebase_rules \
-  # --firebase_rules_out=../firestore/proto.rules \
-
-npx pbjs \
   -o ./src/proto.js \
   -t static-module \
   -w es6 \
